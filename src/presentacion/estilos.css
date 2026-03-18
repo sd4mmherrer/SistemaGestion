@@ -1,0 +1,419 @@
+/* ═══════════════════════════════════════════════
+   GESTOR PRO — Tema Oscuro (Dark Dashboard)
+   Sistema de Gestión de Productos
+   Damián Herrera — Programación III
+   ═══════════════════════════════════════════════ */
+
+/* ─── VARIABLES DE COLOR */
+.root {
+    -color-fondo:       #0d1117;
+    -color-sidebar:     #161b22;
+    -color-borde:       #21262d;
+    -color-borde2:      #30363d;
+    -color-texto:       #e2e8f0;
+    -color-texto-muted: #7d8590;
+    -color-azul:        #0ea5e9;
+    -color-azul-dim:    #0c2d3f;
+    -color-verde:       #22c55e;
+    -color-verde-dim:   #14532d;
+    -color-amarillo:    #f59e0b;
+    -color-rojo:        #ef4444;
+    -color-rojo-dim:    #3d1515;
+    -fx-background-color: -color-fondo;
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+/* ─── SIDEBAR */
+.sidebar {
+    -fx-background-color: -color-sidebar;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 1 0 0;
+    -fx-padding: 0;
+}
+
+.sidebar-logo {
+    -fx-background-color: -color-sidebar;
+    -fx-padding: 20 16 16 16;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 0 1 0;
+}
+
+.sidebar-icon {
+    -fx-font-size: 28px;
+    -fx-text-fill: -color-azul;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 10, 0.5, 0, 0);
+}
+
+.sidebar-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-texto;
+    -fx-letter-spacing: 2px;
+}
+
+.sidebar-subtitle {
+    -fx-font-size: 9px;
+    -fx-text-fill: -color-texto-muted;
+}
+
+.sidebar-sep {
+    -fx-background-color: -color-borde;
+    -fx-padding: 0;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-size: 12px;
+    -fx-padding: 10 16 10 16;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 2;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #1c2230;
+    -fx-text-fill: -color-texto;
+}
+
+.nav-btn-active {
+    -fx-background-color: #1a2640;
+    -fx-text-fill: -color-azul;
+    -fx-border-color: -color-azul;
+    -fx-border-width: 0 0 0 2;
+}
+
+.sidebar-footer {
+    -fx-padding: 12 16 16 16;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 1 0 0 0;
+}
+
+.sidebar-footer-text {
+    -fx-font-size: 10px;
+    -fx-text-fill: #4d5566;
+}
+
+.sidebar-status {
+    -fx-font-size: 10px;
+    -fx-text-fill: -color-verde;
+}
+
+/* ─── ÁREA PRINCIPAL */
+.main-area {
+    -fx-background-color: -color-fondo;
+}
+
+.top-bar {
+    -fx-background-color: -color-sidebar;
+    -fx-padding: 12 20 12 20;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 0 1 0;
+    -fx-spacing: 12;
+}
+
+.top-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-texto;
+}
+
+.search-field {
+    -fx-background-color: #0d1117;
+    -fx-border-color: -color-borde2;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: -color-texto;
+    -fx-prompt-text-fill: -color-texto-muted;
+    -fx-padding: 7 12 7 12;
+    -fx-font-size: 12px;
+}
+
+.search-field:focused {
+    -fx-border-color: -color-azul;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 6, 0.3, 0, 0);
+}
+
+/* ─── BOTONES */
+.btn-primary {
+    -fx-background-color: -color-azul;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 16 8 16;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 8, 0.4, 0, 0);
+}
+
+.btn-primary:hover {
+    -fx-background-color: #0284c7;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 14, 0.6, 0, 0);
+}
+
+.btn-primary:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+.btn-cancelar {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-texto-muted;
+    -fx-border-color: -color-borde2;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 7 14 7 14;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.btn-cancelar:hover {
+    -fx-background-color: #1c2230;
+    -fx-text-fill: -color-texto;
+}
+
+.btn-edit {
+    -fx-background-color: #1a2640;
+    -fx-text-fill: -color-azul;
+    -fx-border-color: #0ea5e944;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.btn-edit:hover {
+    -fx-background-color: #1e3050;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 6, 0.3, 0, 0);
+}
+
+.btn-delete {
+    -fx-background-color: -color-rojo-dim;
+    -fx-text-fill: #f87171;
+    -fx-border-color: #ef444433;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 4 10 4 10;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #4d1a1a;
+    -fx-effect: dropshadow(gaussian, #ef4444, 6, 0.3, 0, 0);
+}
+
+/* ─── ESTADÍSTICAS */
+.stats-row {
+    -fx-padding: 14 20 14 20;
+    -fx-background-color: -color-fondo;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 0 1 0;
+    -fx-spacing: 12;
+}
+
+.stat-card {
+    -fx-background-color: -color-sidebar;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 12 16 12 16;
+}
+
+.stat-info  { -fx-border-color: #0ea5e944; }
+.stat-success { -fx-border-color: #22c55e44; }
+.stat-warning { -fx-border-color: #f59e0b44; }
+
+.stat-label {
+    -fx-font-size: 9px;
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-weight: bold;
+}
+
+.stat-value {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-texto;
+}
+
+.stat-info .stat-value  { -fx-text-fill: -color-azul; }
+.stat-success .stat-value { -fx-text-fill: -color-verde; }
+.stat-warning .stat-value { -fx-text-fill: -color-amarillo; }
+
+.stat-sub {
+    -fx-font-size: 10px;
+    -fx-text-fill: -color-texto-muted;
+}
+
+/* ─── TABLA */
+.tabla-productos {
+    -fx-background-color: -color-fondo;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: -color-borde;
+}
+
+.tabla-productos .column-header {
+    -fx-background-color: -color-sidebar;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 12 8 12;
+}
+
+.tabla-productos .column-header .label {
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.tabla-productos .table-row-cell {
+    -fx-background-color: -color-fondo;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 0 0 0.5 0;
+    -fx-text-fill: -color-texto;
+    -fx-font-size: 12px;
+    -fx-cell-size: 40px;
+}
+
+.tabla-productos .table-row-cell:hover {
+    -fx-background-color: -color-sidebar;
+}
+
+.tabla-productos .table-row-cell:selected {
+    -fx-background-color: #1a2640;
+    -fx-border-color: #0ea5e944;
+}
+
+.tabla-productos .table-cell {
+    -fx-text-fill: -color-texto;
+    -fx-padding: 0 12 0 12;
+}
+
+.cell-precio { -fx-text-fill: -color-verde !important; -fx-font-family: "Courier New"; }
+.cell-stock-bajo { -fx-text-fill: -color-amarillo !important; -fx-font-weight: bold; }
+
+.tabla-productos .placeholder .label {
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-size: 13px;
+    -fx-text-alignment: center;
+}
+
+/* ─── BARRA DE ESTADO */
+.status-bar {
+    -fx-background-color: -color-sidebar;
+    -fx-padding: 6 20 6 20;
+    -fx-border-color: -color-borde;
+    -fx-border-width: 1 0 0 0;
+}
+
+.status-archivo {
+    -fx-font-size: 10px;
+    -fx-text-fill: -color-verde;
+}
+
+.status-version {
+    -fx-font-size: 10px;
+    -fx-text-fill: #4d5566;
+}
+
+/* ─── DIÁLOGOS */
+.dialogo-root {
+    -fx-background-color: -color-sidebar;
+}
+
+.dialogo-titulo {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-texto;
+}
+
+.campo-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-weight: bold;
+}
+
+.campo-formulario {
+    -fx-background-color: #0d1117;
+    -fx-border-color: -color-borde2;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: -color-texto;
+    -fx-prompt-text-fill: #4d5566;
+    -fx-padding: 8 12 8 12;
+    -fx-font-size: 12px;
+    -fx-font-family: "Consolas", monospace;
+}
+
+.campo-formulario:focused {
+    -fx-border-color: -color-azul;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 6, 0.3, 0, 0);
+}
+
+.dialogo-mensaje {
+    -fx-font-size: 11px;
+    -fx-text-fill: -color-texto-muted;
+}
+
+.msg-error {
+    -fx-text-fill: #f87171;
+    -fx-background-color: -color-rojo-dim;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ef444433;
+    -fx-border-radius: 5px;
+}
+
+.msg-exito {
+    -fx-text-fill: #4ade80;
+    -fx-background-color: -color-verde-dim;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 5px;
+}
+
+/* ─── RESULTADO DE BÚSQUEDA */
+.resultado-card {
+    -fx-background-color: #0d1117;
+    -fx-border-color: -color-azul;
+    -fx-border-width: 1;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-padding: 14 16 14 16;
+    -fx-effect: dropshadow(gaussian, #0ea5e9, 8, 0.2, 0, 0);
+}
+
+.resultado-campo {
+    -fx-font-size: 11px;
+    -fx-text-fill: -color-texto-muted;
+    -fx-font-weight: bold;
+}
+
+.resultado-valor {
+    -fx-font-size: 12px;
+    -fx-text-fill: -color-texto;
+    -fx-font-family: "Consolas", monospace;
+}
+
+/* ─── DIÁLOGOS DE ALERTA DEL SISTEMA */
+.dialogo-oscuro .dialog-pane {
+    -fx-background-color: -color-sidebar;
+}
+
+.dialogo-oscuro .dialog-pane .content.label {
+    -fx-text-fill: -color-texto;
+}
+
+.dialogo-oscuro .dialog-pane .header-panel .label {
+    -fx-text-fill: -color-texto;
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: -color-fondo;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -color-borde2;
+    -fx-background-radius: 4px;
+}
