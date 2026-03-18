@@ -1,0 +1,205 @@
+Necesito que actúes como un desarrollador senior en Java, pero también como un tutor que explica todo de forma clara, ordenada y fácil de entender para un estudiante universitario.
+
+Quiero que me ayudes a desarrollar un proyecto completo en Java que cumpla estrictamente con estos requisitos académicos:
+
+CONTEXTO DEL PROYECTO
+Debo desarrollar una aplicación en Java que implemente un sistema de gestión de información utilizando arquitectura por capas y almacenamiento en archivos de texto, SIN usar bases de datos.
+El sistema debe demostrar separación de responsabilidades entre:
+1. Presentación
+2. Lógica de Negocio
+3. Acceso a Datos
+4. Entidades
+
+Además, el proyecto debe incluir operaciones CRUD completas, validaciones, manejo de errores, persistencia en archivos .txt y buenas prácticas de programación.
+También debo documentar el uso de IA, por lo que necesito que todo lo que generes sea comprensible, explicable y adaptable, no algo excesivamente complejo ni demasiado profesional.
+
+OBJETIVO
+Quiero que generes un proyecto funcional, limpio y bien estructurado, con un nivel intermedio: que se vea bien hecho, pero que yo pueda entenderlo, explicarlo y defenderlo fácilmente.
+
+IMPORTANTE
+NO quiero una solución con base de datos.
+NO quiero mezclar capas.
+NO quiero código innecesariamente avanzado.
+NO quiero librerías externas si no son necesarias.
+Quiero que uses únicamente Java estándar y archivos .txt para la persistencia.
+
+TEMA DEL SISTEMA
+Usa como ejemplo un sistema de gestión de [AQUÍ PON EL TEMA QUE QUIERAS: pacientes / productos / estudiantes / libros / usuarios / empleados].
+Si no se especifica otro, usa “Sistema de Gestión de Productos”.
+
+REQUERIMIENTOS OBLIGATORIOS
+El sistema debe permitir:
+- Agregar registro
+- Listar registros
+- Buscar registro
+- Modificar registro
+- Eliminar registro
+
+PERSISTENCIA
+Debes usar archivos .txt para guardar la información.
+Cada registro debe almacenarse en formato tipo:
+id|campo1|campo2|campo3
+
+ARQUITECTURA OBLIGATORIA
+Organiza el proyecto estrictamente en capas, por ejemplo:
+
+/entidades
+/logica
+/accesodatos
+/presentacion
+
+No mezcles responsabilidades entre capas.
+La capa de presentación no debe acceder directamente a archivos.
+La capa de acceso a datos no debe contener lógica de interacción con el usuario.
+La lógica de negocio debe coordinar validaciones y reglas.
+Las entidades solo deben representar datos.
+
+VALIDACIONES OBLIGATORIAS
+Incluye:
+- Validación de campos vacíos
+- Validación de tipos de datos
+- Manejo de errores con try-catch
+- Uso correcto de try-with-resources en manejo de archivos
+- Mensajes claros para el usuario cuando ocurra un error
+
+SALIDA QUE NECESITO DE TU PARTE
+Quiero que me entregues TODO lo siguiente, en este orden:
+
+1. EXPLICACIÓN GENERAL DEL SISTEMA
+- Qué hace el sistema
+- Qué problema resuelve
+- Qué entidad se está gestionando
+
+2. ARQUITECTURA DEL PROYECTO
+- Explicación clara de cada capa
+- Responsabilidad de cada clase
+- Cómo se relacionan entre sí
+
+3. ESTRUCTURA DE CARPETAS Y ARCHIVOS
+Muéstramela como árbol de proyecto
+
+4. CÓDIGO COMPLETO DE CADA ARCHIVO
+Genera el código completo archivo por archivo, indicando:
+- Nombre del archivo
+- Ubicación dentro del proyecto
+- Código completo
+
+5. EXPLICACIÓN DE CADA CLASE
+Después de cada clase, explícame:
+- Qué hace
+- Por qué va en esa capa
+- Qué métodos importantes tiene
+
+6. FLUJO DEL CRUD
+Explícame cómo funciona:
+- agregar
+- listar
+- buscar
+- modificar
+- eliminar
+
+7. ARCHIVO .TXT DE EJEMPLO
+Muéstrame cómo quedaría el archivo de datos con varios registros de ejemplo
+
+8. INSTRUCCIONES DE EJECUCIÓN
+Explícame paso a paso:
+- Cómo compilar
+- Cómo ejecutar
+- Cómo probar el CRUD
+
+9. POSIBLES MEJORAS
+Dame mejoras opcionales, pero sin implementarlas, para que pueda mencionarlas en el PDF si quiero
+
+10. DOCUMENTACIÓN PARA IA_prompts.txt
+Como esta práctica exige documentar el uso de IA, al final necesito que me generes una sección especial llamada:
+“DOCUMENTACIÓN DE USO DE IA”
+En esa sección dame al menos 8 prompts técnicos y útiles relacionados con este proyecto, siguiendo exactamente este formato:
+
+Prompt #1:
+"texto del prompt"
+
+Respuesta IA (resumen):
+"explicación breve de lo que devolvió la IA"
+
+Uso aplicado:
+"en qué parte del proyecto se usó"
+
+Modificación realizada:
+"qué se cambió o adaptó antes de integrarlo"
+
+Haz que esos prompts sean realistas, técnicos y coherentes con el código generado.
+No pongas prompts genéricos; deben parecer de un desarrollo real.
+
+REQUISITOS DE ESTILO DEL CÓDIGO
+- Código claro y legible
+- Nombres de variables entendibles
+- Comentarios útiles, pero no excesivos
+- Nada de patrones complejos innecesarios
+- Todo debe ser fácil de explicar a un profesor
+- El nivel debe ser universitario intermedio
+- Debe funcionar correctamente
+
+PREFERENCIAS IMPORTANTES
+- Usa menú por consola, a menos que te pida interfaz gráfica
+- Usa programación orientada a objetos correctamente
+- Evita complejidad innecesaria
+- Si necesitas una clase base o utilitaria para archivos, puede existir, pero explícala muy bien
+- Si aplicas eliminación lógica o física, justifica cuál elegiste y por qué
+- Si detectas que algo puede confundir al estudiante, explícalo de forma simple
+
+FORMA DE RESPONDER
+Quiero que respondas de forma completa, ordenada y profesional.
+No me des solo ideas.
+Quiero el proyecto completo.
+Empieza primero con una propuesta breve del sistema y la estructura, y luego desarrolla el código completo.
+Asegúrate de que todo sea coherente entre sí.
+No omitas archivos necesarios.
+No uses base de datos en ningún punto.
+
+Además de todo lo anterior, ten en cuenta estas reglas extra:
+
+- El proyecto debe parecer hecho por un estudiante aplicado, no por una empresa.
+- No quiero que el código se vea exageradamente sofisticado.
+- Prefiero una solución simple, clara y funcional.
+- Si hay varias formas de hacerlo, elige la más fácil de entender.
+- Antes de mostrar el código, verifica que la arquitectura por capas esté bien separada.
+- Antes de terminar, revisa que sí existan las 5 operaciones CRUD.
+- Antes de terminar, revisa que el manejo de archivos use try-with-resources.
+- Antes de terminar, revisa que haya validaciones de datos y manejo de errores.
+- Antes de terminar, revisa que el sistema sea coherente con el archivo .txt usado para persistencia.
+- Antes de terminar, crea un ejemplo de IA_prompts.txt sólido y bien redactado.
+- Si identificas algo que el profesor podría cuestionar, explícalo anticipadamente.
+
+Ahora revisa todo el proyecto que generaste y haz una auditoría académica completa.
+
+Quiero que verifiques:
+1. Si realmente cumple arquitectura por capas
+2. Si no hay mezcla de responsabilidades
+3. Si el CRUD está completo
+4. Si el manejo de archivos está correcto
+5. Si hay validaciones suficientes
+6. Si el uso de try-catch y try-with-resources está bien aplicado
+7. Si el código es fácil de entender para un estudiante
+8. Si el contenido de IA_prompts.txt está bien alineado con el proyecto
+
+Luego dame:
+- Errores encontrados
+- Mejoras recomendadas
+- Versión corregida del código si hace falta
+- Consejos para explicárselo al profesor
+
+Con base en el proyecto generado, redacta el contenido de un documento PDF académico con estas secciones:
+1. Introducción
+2. Objetivo general del sistema
+3. Descripción del problema resuelto
+4. Arquitectura por capas utilizada
+5. Explicación de cada capa
+6. Funcionalidades CRUD implementadas
+7. Manejo de archivos de texto
+8. Validaciones y control de errores
+9. Ejemplos de uso del sistema
+10. Uso de Inteligencia Artificial durante el desarrollo
+11. Conclusiones
+Redáctalo con estilo académico claro, natural y entendible, como si fuera hecho por un estudiante universitario.
+No lo hagas demasiado técnico ni demasiado corto.
+
